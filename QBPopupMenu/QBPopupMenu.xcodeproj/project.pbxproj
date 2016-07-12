@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A9319F41D35817C00395B04 /* QBPlasticPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319E81D35817C00395B04 /* QBPlasticPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A9319F41D35817C00395B04 /* QBPlasticPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319E81D35817C00395B04 /* QBPlasticPopupMenu.h */; };
 		1A9319F51D35817C00395B04 /* QBPlasticPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319E91D35817C00395B04 /* QBPlasticPopupMenu.m */; };
 		1A9319F61D35817C00395B04 /* QBPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319EA1D35817C00395B04 /* QBPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A9319F71D35817C00395B04 /* QBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319EB1D35817C00395B04 /* QBPopupMenu.m */; };
 		1A9319F81D35817C00395B04 /* QBPopupMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319EC1D35817C00395B04 /* QBPopupMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A9319F91D35817C00395B04 /* QBPopupMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319ED1D35817C00395B04 /* QBPopupMenuItem.m */; };
-		1A9319FA1D35817C00395B04 /* QBPopupMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319EE1D35817C00395B04 /* QBPopupMenuItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A9319FA1D35817C00395B04 /* QBPopupMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319EE1D35817C00395B04 /* QBPopupMenuItemView.h */; };
 		1A9319FB1D35817C00395B04 /* QBPopupMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319EF1D35817C00395B04 /* QBPopupMenuItemView.m */; };
-		1A9319FC1D35817C00395B04 /* QBPopupMenuOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319F01D35817C00395B04 /* QBPopupMenuOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A9319FC1D35817C00395B04 /* QBPopupMenuOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319F01D35817C00395B04 /* QBPopupMenuOverlayView.h */; };
 		1A9319FD1D35817C00395B04 /* QBPopupMenuOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319F11D35817C00395B04 /* QBPopupMenuOverlayView.m */; };
-		1A9319FE1D35817C00395B04 /* QBPopupMenuPagenatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319F21D35817C00395B04 /* QBPopupMenuPagenatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A9319FE1D35817C00395B04 /* QBPopupMenuPagenatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319F21D35817C00395B04 /* QBPopupMenuPagenatorView.h */; };
 		1A9319FF1D35817C00395B04 /* QBPopupMenuPagenatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319F31D35817C00395B04 /* QBPopupMenuPagenatorView.m */; };
 /* End PBXBuildFile section */
 
