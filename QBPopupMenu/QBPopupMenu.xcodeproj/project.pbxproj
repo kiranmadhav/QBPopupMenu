@@ -19,7 +19,6 @@
 		1A9319FD1D35817C00395B04 /* QBPopupMenuOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319F11D35817C00395B04 /* QBPopupMenuOverlayView.m */; };
 		1A9319FE1D35817C00395B04 /* QBPopupMenuPagenatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9319F21D35817C00395B04 /* QBPopupMenuPagenatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A9319FF1D35817C00395B04 /* QBPopupMenuPagenatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9319F31D35817C00395B04 /* QBPopupMenuPagenatorView.m */; };
-		1A931A011D35826D00395B04 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A931A001D35826D00395B04 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,7 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A931A011D35826D00395B04 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
