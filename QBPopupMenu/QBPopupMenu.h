@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for QBPopupMenu.
+FOUNDATION_EXPORT double QBPopupMenuVersionNumber;
+
+//! Project version string for QBPopupMenu.
+FOUNDATION_EXPORT const unsigned char QBPopupMenuVersionString[];
+
 #import "QBPopupMenuItem.h"
 
 @class QBPopupMenu;
