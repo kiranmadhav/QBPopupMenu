@@ -24,27 +24,15 @@
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    
-    
+
     UIView *view = [super hitTest:point withEvent:event];
     
     if (view == self) {
         [self.popupMenu dismissAnimated:YES];
         return nil;
     }
+    
     return view;
 }
-
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    UITouch *touch = [touches anyObject];
-//    UIView *view = touch.view;
-//    
-//    if (view == self) {
-//        // Close popup menu
-//        [self.popupMenu dismissAnimated:YES];
-//    }
-//}
-
 
 @end
