@@ -67,6 +67,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         self.arrowDirection = QBPopupMenuArrowDirectionDefault;
         self.popupMenuInsets = UIEdgeInsetsMake(10, 10, 10, 10);
         self.margin = 2;
+        self.minItemWidth = 40;
         
         self.color = [[UIColor blackColor] colorWithAlphaComponent:0.8];
         self.highlightedColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.8];
@@ -414,6 +415,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
             width += self.arrowSize;
         }
         
+        width = MAX(width, self.minItemWidth);
         itemView.frame = CGRectMake(offset, 0, width, height);
         
         offset += width;
