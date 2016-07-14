@@ -164,4 +164,13 @@
     return _item.title;
 }
 
+- (NSString *)accessibilityValue {
+    if (_item.accessibilityValue) {
+        return _item.accessibilityValue;
+    }
+    
+    return nil;
+}
+
+
 @end
