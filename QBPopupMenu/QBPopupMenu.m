@@ -186,6 +186,8 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
             if (self.delegate && [self.delegate respondsToSelector:@selector(popupMenuDidAppear:)]) {
                 [self.delegate popupMenuDidAppear:self];
             }
+            
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.visibleItemViews[0]);
         }];
     } else {
         [self.overlayView addSubview:self];
@@ -196,6 +198,8 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         if (self.delegate && [self.delegate respondsToSelector:@selector(popupMenuDidAppear:)]) {
             [self.delegate popupMenuDidAppear:self];
         }
+        
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.visibleItemViews[0]);
     }
 }
 
@@ -347,6 +351,9 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         QBPopupMenuPagenatorView *leftPagenatorView = [[[self class] pagenatorViewClass] leftPagenatorViewWithTarget:self action:@selector(showPreviousPage)];
         
         [self addSubview:leftPagenatorView];
+        leftPagenatorView.accessibilityLabel = self.paginatorAccessibilityLabel;
+        leftPagenatorView.accessibilityHint = self.paginatorAccessibilityHint;
+        
         [visibleItemViews addObject:leftPagenatorView];
     }
     
@@ -361,6 +368,9 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         QBPopupMenuPagenatorView *rightPagenatorView = [[[self class] pagenatorViewClass] rightPagenatorViewWithTarget:self action:@selector(showNextPage)];
         
         [self addSubview:rightPagenatorView];
+        rightPagenatorView.accessibilityLabel = self.paginatorAccessibilityLabel;
+        rightPagenatorView.accessibilityHint = self.paginatorAccessibilityHint;
+        
         [visibleItemViews addObject:rightPagenatorView];
     }
     
