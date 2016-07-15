@@ -68,6 +68,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         self.popupMenuInsets = UIEdgeInsetsMake(10, 10, 10, 10);
         self.margin = 2;
         self.minItemWidth = 40;
+        self.separatorWidth = 1;
         
         self.color = [[UIColor blackColor] colorWithAlphaComponent:0.8];
         self.highlightedColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.8];
@@ -816,15 +817,21 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         CGContextSetFillColorWithColor(context, [color CGColor]);
         CGContextFillPath(context);
         
+        // Separator
+        if (direction == QBPopupMenuArrowDirectionDown || direction == QBPopupMenuArrowDirectionUp) {
+            for (QBPopupMenuItemView *itemView in self.visibleItemViews) {
+                [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - self.separatorWidth,
+                                                     rect.origin.y,
+                                                     self.separatorWidth,
+                                                     rect.size.height)
+                             withClipPath:path];
+            }
+        }
+        
         CGPathRelease(path);
     } CGContextRestoreGState(context);
     
-    // Separator
-    if (direction == QBPopupMenuArrowDirectionDown || direction == QBPopupMenuArrowDirectionUp) {
-        for (QBPopupMenuItemView *itemView in self.visibleItemViews) {
-            [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - 1, rect.origin.y, 1, rect.size.height)];
-        }
-    }
+    
 }
 
 - (void)drawHeadInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius highlighted:(BOOL)highlighted
@@ -879,17 +886,32 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
     
     // Separator
     if (!lastItem) {
-        [self drawSeparatorInRect:CGRectMake(rect.origin.x + rect.size.width - 1, rect.origin.y, 1, rect.size.height)];
+        [self drawSeparatorInRect: CGRectMake(rect.origin.x + rect.size.width - self.separatorWidth,
+                                              rect.origin.y,
+                                              self.separatorWidth,
+                                              rect.size.height)
+                     withClipPath: NULL];
     }
 }
 
-- (void)drawSeparatorInRect:(CGRect)rect
+- (void)drawSeparatorInRect:(CGRect)rect withClipPath: (CGPathRef)path
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // Separator
     CGContextSaveGState(context); {
-        CGContextClearRect(context, rect);
+        if (path) {
+            CGContextAddPath(context, path);
+            CGContextClip(context);
+        }
+        
+        if (self.separatorColor) {
+            CGContextSetFillColorWithColor(context, self.separatorColor.CGColor);
+            
+            CGContextFillRect(context, rect);
+        } else {
+            CGContextClearRect(context, rect);
+        }
     } CGContextRestoreGState(context);
 }
 

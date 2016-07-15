@@ -55,6 +55,8 @@ typedef NS_ENUM(NSUInteger, QBPopupMenuArrowDirection) {
 
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, strong) UIColor *highlightedColor;
+@property (nonatomic, strong) UIColor *separatorColor;
+@property (nonatomic, assign) CGFloat separatorWidth;
 
 @property (nonatomic, copy) NSString *paginatorAccessibilityLabel;
 @property (nonatomic, copy) NSString *paginatorAccessibilityHint;
