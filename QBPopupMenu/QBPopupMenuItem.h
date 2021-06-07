@@ -6,8 +6,7 @@
 //  Copyright (c) 2013年 Katsuma Tanaka. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import UIKit;
 @interface QBPopupMenuItem : NSObject
 
 @property (nonatomic, weak, readonly) id target;
