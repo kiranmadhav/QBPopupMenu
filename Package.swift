@@ -16,6 +16,7 @@ let package = Package(
         .target(
             name: "QBPopupMenu",
             path: "QBPopupMenu",
+            exclude: ["Info.plist"],
             publicHeadersPath: ""
         ),
     ]
