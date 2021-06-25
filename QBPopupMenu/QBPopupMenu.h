@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Katsuma Tanaka. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 //! Project version number for QBPopupMenu.
 FOUNDATION_EXPORT double QBPopupMenuVersionNumber;
