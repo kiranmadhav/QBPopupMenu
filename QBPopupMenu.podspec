@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'QBPopupMenu'
-  s.version          = '2.0'
+  s.version          = '2.0.1'
   s.summary          = 'Utilities provides an extensible Swift-based logging API that is simple, lightweight and performant.'
   s.homepage         = 'https://github.com/nek023/QBPopupMenu'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
